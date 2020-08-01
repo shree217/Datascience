@@ -1,4 +1,4 @@
-**Predicting heart disease using machine learning
+**Predicting heart disease using machine learning**
 
-PROBLEM STATEMENT:
-< the problem statement is to predict whether a patient has heart disease or not.
+**PROBLEM STATEMENT:**
+- The problem statement is to predict whether a patient has heart disease or not.
