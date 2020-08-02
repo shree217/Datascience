@@ -1,2 +1,2 @@
 # Datascience
-Checkout my datascience notes that i have learned so far.
+Checkout my datascience notes and work samples that i have learned so far.
