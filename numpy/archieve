@@ -1,0 +1,167 @@
+1.SECTION OVERVIEW:
+
+	1. numpy is similar to python lists.
+	2. REASONS to use numpy rather than python list is that
+		2.1: numpy are written in c programming which executes faster than python.
+		2.2: machines usually understand 0's and 1's and things like numbers which can be contained in numpy are really easy for machines to understand versus something more complicated.
+
+2.NUMPY INTRODUCTION:
+
+	1. numpy is an numerical python.
+	2. numpy forms the foundation of turning your data in pandas  into a series of numbers and then a machine learning algorithm work out the patterns in those numbers(pic1).
+	3. numpy comes under data analysis section(pic2).
+	4. WHY NUMPY(pic3).
+	5. WHAT WE ARE GOING TO COVER(pic4).
+	6. WHERE WE CAN GET HELP: search in stackoverflow and scipy.org(pic5).
+
+	2.1:NUMPY DOCUMENTATION: https://numpy.org/doc/1.18/  
+	2.2:INTRO TO NUMPY IN JUPYTER: https://github.com/mrdbourke/zero-to-mastery-ml/blob/master/section-2-data-science-and-ml-tools/introduction-to-numpy-video.ipynb    
+	2.3: INTRO TO NUMPY: https://github.com/mrdbourke/zero-to-mastery-ml/blob/master/section-2-data-science-and-ml-tools/introduction-to-numpy.ipynb     
+
+	3: QUICK NOTE CORRECTION IN NEXT VIDEO:  file:///E:/sm%20files/2.data%20science/7.%20NumPy/3.%20Quick%20Note%20Correction%20In%20Next%20Video.html    
+
+4.NUMPY DATATYPE AND ATTRIBUTES:
+	
+	1. ARRAY syntax(pic1): variable= numpy.array([values]) .
+	2. ANATOMY OF ARRAY (pic2).
+	3. type(variable) => returns the type of array.
+	4. variable.shape => returns the axis parameter.
+	5. variable.ndim => returns the dimension of array.
+	6. , => it returns the values with comes as output(pic3).
+	7. variable.dtype =>returns type of the data.
+	8. variable.size => returns the count of datas.
+	9. dataframe from array => variable= pd.DataFrame(array variable).
+
+5.CREATING NUMPY ARRAY:
+
+	1. np.ones(shift+tab) => returns an array with 1 as data.
+	2. np.zeros(shift+tab) => return an array with 0 as data.
+	3. np.arange(start,end,increment) => returns an array within the start and end of the data with the incrementation (pic1).
+	4. np.random.randint(low, high=None, size=None, dtype='l') => returns value between the low and high with an array dimension spcified in the size .
+	5. np.random.random((size)) => returns an random values of size-array.
+	6. np.random.rand(size) => similar to np.random.random (pic2).
+
+6.NUMPY RANDOM SEED:
+
+	1. when sharing the document with others the random attribute provides random numbers each time. thus creating problem. so to over come this np.random.seed().(compare pic1 & pic2).
+	2. np.random.seed(seed=value) .
+
+7.VIEWING ARRAYS AND METRICES:
+
+	1. see numpy documentation for unique (pic1).
+	2. np.unique() => Find the unique elements of an array.
+	3. slicing (pic2 &3).
+
+8. MANIPULATING ARRAYS:
+
+	Arithmetic manipulation:
+	1. + (or) numpy.square(variable)
+	2. - 
+	3. * 
+	4. / 
+	5. // 
+	6. ** (or) numpy.square(variable)  
+	7. %
+	8. numpy.exp(variable) => expoential.  
+	9. numpy.log(variable).  
+
+	## Browse broadcasting in numpy => broadcast is used to describe 
+
+9. MANIPULATING ARRAYS2:
+	
+	1. variable =[value seperated by commas] => creates a list.
+	2. sum(var) or np.sum(var).  
+	3. create a large array  variable = np.random.random(no of data's).  
+	4. % => jupyter notebook magic function.  
+	5. %timeit => the time taken by the following function.  
+	6. np.mean(variable)  
+	7. np.max(variable)  
+	8. np.min(variabe)  
+	9. np.std(variable) => computes standard deviation
+		9.1: standard deviation is a measure of how spread out a group of numbers is from the main. 
+		9.2: standard deviation is actually just the square root of the variance. 
+	10. np.var(variable) => computes varience
+		10.1: variance equals the measure of the average degree to which each number is different to the main. 
+		10.2: higher variance equals wider range of numbers.  
+		10.3: lower variance equals lower range of numbers. 
+	11. np.sqrt(variable) => square root of the variable.  
+
+10. STANDARD DEVIATION AND VARIENCE:
+
+	1. np.var() => varience.  
+	2. np.std() =>standard deviation. 
+	3. np.mean() => mean.  
+	4. %matplotlib inline
+	   import matplotlib.pyplot as plt
+	   plt.hist(high_var_array)
+	   plt.show()
+
+	10.2: standard deviation and varience:  https://www.mathsisfun.com/data/standard-deviation.html 
+
+11. RESHAPE AND TRANSPOSE;
+	
+	1. General rule of broadcasting(pic1): 
+		1.1: the dimension should be same.
+		1.2: or any one of the dimension should be one.
+	2.  variable.shape => returns the dimension(pic2). 
+	3. variable.reshape(dimensions) => changes the array dimension(pic3).  
+	4. variable.T =>transpose(pic4).
+
+12. DOT PRODUCT VS ELEMENT WISE:
+
+	1.  Dot product is a type of product. * is element-wise product.  
+	2.  np.dot(variable1,variable2) or var1.dot(var2) =>dot product. 
+	3.  Dot product (matrix multiplication).
+	4.  Rules of dot product.
+
+		4.1: column of array1 == row of array2.
+		4.2: then the resultant array size is (row of array1,column of array2)
+
+	12.1: matrix multiplication : https://www.mathsisfun.com/algebra/matrix-multiplying.html    
+
+13. EXCERISE NUT BUTTER STORE SALES:
+
+	1. creating an DataFrame from sratch (pic1).
+	2. combaining two rows into a single DataFrame(pic2,3&4).
+
+14. COMPARISON OPERATOR:
+
+	1. <= (pic1)
+	2. <
+	3. >=
+	4. >
+	5. ==
+
+	## check out more @ logical functions or comparison operator in numpy manual(pic2,3,4).  
+
+15. SORTING ARRAYS:
+
+	1. np.sort(variable) => sorts based by rows.
+	2. np.argsort(variable) => returns an indices that would sort an array. (arg - indicates indeices).
+	3. np.argmin(variable) => min number index. 
+	4. np.argmax(variable) => max number index.
+
+16. TURN IMAGES INTO NUMPY ARRAYS:
+	
+	1. # Displaying images 2 methods
+	   # 1. ![title](image/panda.png)  -within markdown mode
+	   # 2. <img src="images/dog-photo.png"/> - with markdown mode
+	2. to access imread use => from matplotlib.image import imread  .  
+	3. imread() => read an image from a file into an array.
+
+	16.2: Introduction to NumPy Jupyter Notebook (from the videos) : https://github.com/mrdbourke/zero-to-mastery-ml/blob/master/section-2-data-science-and-ml-tools/introduction-to-numpy-video.ipynb  
+	16.3: Introduction to NumPy Jupyter Notebook (with annotations) : https://github.com/mrdbourke/zero-to-mastery-ml/blob/master/section-2-data-science-and-ml-tools/introduction-to-numpy.ipynb   
+
+17. Assignment NumPy Practice : https://github.com/mrdbourke/zero-to-mastery-ml/blob/master/section-2-data-science-and-ml-tools/numpy-exercises.ipynb   
+	17.1: numpy assignment: https://github.com/mrdbourke/zero-to-mastery-ml/blob/master/section-2-data-science-and-ml-tools/numpy-exercises-solutions.ipynb     
+	17.2: numpy assignment solution: https://raw.githubusercontent.com/mrdbourke/zero-to-mastery-ml/master/data/car-sales.csv   
+
+
+18. Optional Extra NumPy resources : 
+
+	18.1: The Basics of NumPy Arrays by Jake VanderPlas:  	https://jakevdp.github.io/PythonDataScienceHandbook/02.02-the-basics-of-numpy-arrays.html   
+	
+	18.2: A Visual Introduction to NumPy by Jay Alammar:  http://jalammar.github.io/visual-numpy/
+
+	18.3: NumPy Quickstart tutorial (part of the NumPy documentation):   https://numpy.org/doc/1.17/user/quickstart.html
+	 
